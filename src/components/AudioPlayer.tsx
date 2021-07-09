@@ -361,6 +361,7 @@ const AudioPlayer: React.FunctionComponent<IAudioPlayerProps> = ({
       component={Paper}
       alignItems="center"
       className={cx(
+        'd-flex',
         classes.root,
         classes[`elevation${elevation}`],
         {
