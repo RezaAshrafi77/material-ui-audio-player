@@ -252,7 +252,7 @@ var AudioPlayer = function (_a) {
         React.createElement(Typography_1.default, { className: classNames.progressTime, onClick: toggleCurrentTime }, showCurrentTime
             ? helpers_1.getFormattedTime(state.player.current)
             : helpers_1.getFormattedTime(state.player.remaning, true))));
-    return visible ? (React.createElement(Grid_1.default, { container: true, spacing: mainContainerSpacing, component: Paper_1.default, alignItems: "center", className: classnames_1.default(classes.root, classes["elevation" + elevation], (_b = {},
+    return visible ? (React.createElement(Grid_1.default, { container: true, spacing: mainContainerSpacing, component: Paper_1.default, alignItems: "center", className: classnames_1.default('d-flex', classes.root, classes["elevation" + elevation], (_b = {},
             _b[classes.rounded] = !rounded,
             _b), classNames.root) },
         React.createElement("audio", { ref: player, hidden: true, preload: preload, key: audioKey }, Array.isArray(src) ? (src.map(function (srcLink, index) { return React.createElement("source", { key: index, src: srcLink }); })) : (React.createElement("source", { src: src }))),
