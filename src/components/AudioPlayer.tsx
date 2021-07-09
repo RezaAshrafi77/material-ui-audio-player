@@ -60,18 +60,18 @@ export const useComponentStyles = makeStyles((theme: any) => {
   const elevations = {};
   theme.shadows.forEach((shadow, index) => {
     elevations[`elevation${index}`] = {
-      boxShadow: shadow,
+      // boxShadow: shadow,
     };
   });
 
   return {
     root: (props: any) => ({
       position: 'relative',
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: 'rgba(0,0,0,0)',
       color: theme.palette.text.primary,
       width: props.width,
       height: props.height,
-      transition: theme.transitions.create('box-shadow'),
+      // transition: theme.transitions.create('box-shadow'),
     }),
     sliderContainerWrapper: (props: any) => ({
       width: 'auto',
@@ -406,7 +406,7 @@ const AudioPlayer: React.FunctionComponent<IAudioPlayerProps> = ({
       {download && (
         <AudioDownloadsControl src={src} playerColors={playerColors}/>
       )}
-      {volume && (
+      {/* {volume && (
         <AudioVolumeControl
           muteAudio={_muteAudio}
           unmuteAudio={_unmuteAudio}
@@ -416,7 +416,7 @@ const AudioPlayer: React.FunctionComponent<IAudioPlayerProps> = ({
           playerColors={playerColors}
           icons={icons}
         />
-      )}
+      )} */}
       {displaySlider && (
         <Grid
           item={true}
@@ -432,13 +432,13 @@ const AudioPlayer: React.FunctionComponent<IAudioPlayerProps> = ({
               value={state.player.progress}
             />
           </Grid>
-          {!isSingleTime && (
+          {/* {!isSingleTime && (
             <Grid item={true} className={classes.commonContainer}>
               <Typography className={classNames.progressTime}>
                 {getFormattedTime(state.player.duration)}
               </Typography>
             </Grid>
-          )}
+          )} */}
           {isSingleTime && !isTimePositionStart && currentTimeComp}
         </Grid>
       )}
